@@ -186,8 +186,10 @@ public class Client {
         if (contact == null) {
             System.out.println("Không có danh bạ có số điện thoại " + phoneNumber);
         } else {
-            if (acceptDelete())
+            if (acceptDelete()){
+                System.out.println("Bạn có muốn xóa contact này không (Có/Không) : ");
                 MANAGER.removeTelephoneDirectory(contact);
+            }
         }
     }
 
